@@ -8,3 +8,19 @@
     bottom: 0;
     width: 100%;
 }
+
+
+.footer .left,
+.footer .right {
+    display: flex;
+    align-items: center;
+}
+
+.footer .left p,
+.footer .right p {
+    margin: 0;
+}
+
+.footer .right {
+    text-align: right;
+}
