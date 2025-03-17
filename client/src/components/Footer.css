@@ -10,17 +10,12 @@
 }
 
 
-.footer .left,
-.footer .right {
-    display: flex;
-    align-items: center;
-}
-
-.footer .left p,
-.footer .right p {
-    margin: 0;
+.footer .left {
+    text-align: left;
+    flex: 1;
 }
 
 .footer .right {
     text-align: right;
+    flex: 1;
 }
