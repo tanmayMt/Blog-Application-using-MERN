@@ -12,7 +12,9 @@ const app = express();
 
 // ✅ Updated CORS Configuration
 const corsOptions = {
-    origin: "http://localhost:3000", // Allow frontend requests
+    // origin: "http://localhost:3000", // Allow frontend requests
+    origin: "https://blog-application-using-mern.vercel.app",
+    // https://blog-application-using-mern.vercel.app
     methods: "GET,POST,PUT,DELETE",
     credentials: true // Allow cookies and authentication headers
 };
