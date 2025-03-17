@@ -115,11 +115,11 @@ const PostDetail = () => {
             </div>
             {/* Comments Section */}
             <div className="comments-section">
-                <h3>Comments👇</h3>
+                <h3>Comments💬👇</h3>
 
                 {/* Add Comment Form */}
                 <form onSubmit={handleAddComment} className="add-comment-form">
-                    <input 
+                    💬<input 
                         type="text" 
                         value={newComment} 
                         onChange={(e) => setNewComment(e.target.value)} 

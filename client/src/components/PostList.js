@@ -61,10 +61,9 @@ const PostList = () => {
             <ToastContainer position="top-center" autoClose={800} /> {/* Toast container */}
             
             {posts.map(post => (
-              <Link to={`/post/${post._id}`}>
                 <div className="post-card" key={post._id}>
                     <Link to={`/post/${post._id}`} className="post-title"><b>{post.title}</b></Link>
-                    <p className="post-content">{post.content}</p>
+                    <Link to={`/post/${post._id}`} className="post-content"><p>{post.content}</p></Link>
                     
                     <div className="post-actions">
                         <Link to={`/edit/${post._id}`} className="edit-btn">Edit Post✏️</Link>
@@ -72,7 +71,6 @@ const PostList = () => {
                         <button className="like-btn" onClick={() => likePost(post._id)}>👍 {post.likes}</button>
                     </div>
                 </div>
-              </Link>
             ))}
         </div>
     );
