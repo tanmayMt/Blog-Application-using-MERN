@@ -5,7 +5,7 @@ import "./Header.css"; // Add styles
 const Header = () => {
     return (
         <header className="header">
-            <h1>My Blog</h1>
+            <h1>🚀 Welcome to the Blog 🌟</h1>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>

@@ -1,32 +1,3 @@
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-
-// import "./PostList.css"; // Import the CSS file
-
-// const PostList = () => {
-//     const [posts, setPosts] = useState([]);
-
-//     useEffect(() => {
-//         axios.get("http://localhost:9000/api/posts")
-//             .then(response => setPosts(response.data))
-//             .catch(error => console.error("Error fetching posts:", error));
-//     }, []);
-
-//     return (
-//         <div className="post-list">
-//             <h2>Blog Posts</h2>
-//             {posts.map(post => (
-//                 <div className="post-card" key={post._id}>
-//                     <h3>{post.title}</h3>
-//                     <p>{post.content}</p>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default PostList;
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -56,10 +27,15 @@ const PostList = () => {
 
     return (
         <div className="post-list">
-            <h2>📜 Blog Posts</h2>
+            <h1 style={{ 
+            color: "green",  
+            padding: "10px 20px", 
+            textAlign: "center", 
+            fontSize: "2rem", 
+        }}>📜 Blog Posts</h1>
             {posts.map(post => (
                 <div className="post-card" key={post._id}>
-                    <Link to={`/post/${post._id}`} className="post-title">{post.title}</Link>
+                    <Link to={`/post/${post._id}`} className="post-title"><b>{post.title}</b></Link>
                     <p>{post.content}</p>
                     <div className="post-actions">
                         <Link to={`/post/${post._id}`} className="view-btn">View</Link>

@@ -34,3 +34,36 @@
         transform: translateY(0);
     }
 }
+
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comment {
+    background: hsl(324, 71%, 44%);
+    padding: 10px;
+    border-left: 5px solid #6a11cb;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.comment button:hover {
+    background: darkred;
+}
