@@ -7,8 +7,8 @@ const PostDetail = () => {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:9000/api/posts/${id}`)
-        // axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/posts/${id}`)
+        //axios.get(`http://localhost:9000/api/posts/${id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/api/posts/${id}`)
             .then(response => setPost(response.data))
             .catch(error => console.error("Error fetching post:", error));
     }, [id]);
