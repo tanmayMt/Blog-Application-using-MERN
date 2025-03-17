@@ -1,0 +1,6 @@
+cd server
+blog-application\server> npm run server
+
+
+cd client
+blog-application\client> npm run start

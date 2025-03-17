@@ -41,7 +41,7 @@ const CreatePost = () => {
       <div>
         <ToastContainer
           position="top-center"
-          autoClose={470} 
+          autoClose={300} 
           hideProgressBar={false} 
           closeOnClick 
           draggable 
