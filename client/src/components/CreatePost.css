@@ -38,3 +38,15 @@
 .create-post-form button:hover {
     background-color: #0056b3;
 }
+
+/* Custom toast notification styles */
+.custom-toast {
+    font-size: 18px !important;
+    /* Bigger text */
+    padding: 20px !important;
+    /* More padding */
+    min-width: 300px !important;
+    /* Wider box */
+    max-width: 500px !important;
+    text-align: center;
+}

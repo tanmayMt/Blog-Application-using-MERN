@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 import "./PostDetail.css"; // Import the CSS file
 
 const PostDetail = () => {
@@ -34,8 +36,12 @@ const PostDetail = () => {
             );
             setComments([...comments, response.data]); // Update comments state
             setNewComment(""); // Clear input field
+            toast.success("Comment added successfully!", {
+                style: { backgroundColor: "yellowgreen", color: "black",fontWeight: "bold"}
+            }); // 🎉 Success toast
         } catch (error) {
             console.error("Error adding comment:", error);
+            toast.error("Failed to add comment."); // ❌ Error toast
         }
     };
 
@@ -44,13 +50,18 @@ const PostDetail = () => {
         try {
             await axios.delete(`${process.env.REACT_APP_API_URL}/api/comments/${commentId}`);
             setComments(comments.filter(comment => comment._id !== commentId)); // Update state
+            toast.success("Comment deleted successfully!", {
+                style: { backgroundColor: "red", color: "#FFD700",fontWeight: "bold" },
+            }); // 🎉 Success toast
         } catch (error) {
             console.error("Error deleting comment:", error);
+            toast.error("Failed to delete comment."); // ❌ Error toast
         }
     };
 
     return post ? (
         <div className="post-detail">
+            <ToastContainer position="bottom-center" autoClose={1500} /> {/* Toast container */}
             <h2>{post.title}</h2>
             <p>{post.content}</p>
 
