@@ -1,0 +1,36 @@
+/* PostDetail.css */
+.post-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.post-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffeb3b;
+}
+
+.post-detail p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f3f3f3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
