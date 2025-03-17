@@ -14,19 +14,23 @@ exports.getComments = async (req, res) => {
 // Add a comment to a post
 exports.addComment = async (req, res) => {
     try {
-        const { postId, text } = req.body;
+        const { text } = req.body;  // Get text from the request body
+        const { postId } = req.params; // Get postId from URL parameters
+
         if (!postId || !text) {
             return res.status(400).json({ message: "Post ID and text are required" });
         }
 
         const newComment = new Comment({ postId, text });
         await newComment.save();
+        
         res.status(201).json(newComment);
     } catch (error) {
         console.error("Error adding comment:", error.message);
         res.status(500).json({ message: "Server error. Unable to add comment." });
     }
 };
+
 
 // Delete a comment
 exports.deleteComment = async (req, res) => {

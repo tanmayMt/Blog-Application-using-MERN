@@ -40,6 +40,29 @@
     margin-top: 20px;
 }
 
+.add-comment-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.add-comment-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-comment-form button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 .comment {
     background: hsl(324, 71%, 44%);
     padding: 10px;
