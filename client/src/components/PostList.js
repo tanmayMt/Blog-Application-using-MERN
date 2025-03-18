@@ -4,9 +4,11 @@ import axios from "axios";
 import "./PostList.css"; // Import the CSS file
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
+import { useNavigate } from 'react-router-dom';
 
 const PostList = () => {
     const [posts, setPosts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchPosts();
@@ -68,6 +70,7 @@ const PostList = () => {
                     <div className="post-actions">
                         <Link to={`/edit/${post._id}`} className="edit-btn">Edit Post✏️</Link>
                         {/* <button className="delete-btn" onClick={() => deletePost(post._id)}>Delete</button> */}
+                        <button onClick={() => navigate(`/post/${post._id}`)}>💬</button>
                         <button className="like-btn" onClick={() => likePost(post._id)}>👍 {post.likes}</button>
                     </div>
                 </div>
