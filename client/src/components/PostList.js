@@ -76,7 +76,7 @@ const PostList = () => {
                         <button className="like-btn" onClick={() => likePost(post._id)}>👍 {post.likes}</button>
                     </div>
                 </div>
-            ))}
+            ))} 
         </div>
     );
 };
