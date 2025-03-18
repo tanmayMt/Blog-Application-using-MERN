@@ -71,7 +71,7 @@ const PostList = () => {
                     <div className="post-actions">
                         <Link to={`/edit/${post._id}`} className="edit-btn">Edit Post✏️</Link>
                         {/* <button className="delete-btn" onClick={() => deletePost(post._id)}>Delete</button> */}
-                        <button onClick={() => navigate(`/post/${post._id}`)}>💬<MdOutlineInsertComment />
+                        <button onClick={() => navigate(`/post/${post._id}`)}><MdOutlineInsertComment size={14} />
 </button>
                         <button className="like-btn" onClick={() => likePost(post._id)}>👍 {post.likes}</button>
                     </div>
